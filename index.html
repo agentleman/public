@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html ng-app="zcApp">
+<html ng-app="yunwaApp">
 <head>
-    <meta charset="UTF-8">
-    <title>震川教育</title>
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="键水..." />
+	<meta name="description" itemprop="description" content="键水净水器邀您体验" />
+	<meta itemprop="name" content="键水净水器" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache, must-revalidate">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="x-dns-prefetch-control" content="on" />
+	<meta name="304Fix" content="safari-fix">
+	<meta name="fragment" content="!" />
+	<link rel="dns-prefetch" href="http://hm.baidu.com" />
+	<link rel="dns-prefetch" href="http://webapi.amap.com" />
+	<link rel="dns-prefetch" href="https://api.scinan.com" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="#">
+	<link rel="stylesheet" href="common/less/base.css?v={{VERSION}}">
+	<link rel="stylesheet" href="common/css/mobiscroll.custom.min.css?v={{VERSION}}">
+	<script src="common/js/fastclick.js"></script>
+	<script src="common/js/jweixin.js"></script>
+	<title>键水</title>
 </head>
 <body>
+	<!--loading 加载框-->
+	<div class="loader_popover" ng-if="show_loader">
+		<div class="loader">
+			<div class="loader-inner">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 
+	</div>
+
+	<!--views 总视图-->
+	<div ui-view="mainView" ng-if="!globalTip.hideView" lazy-container></div>
+
+	<!--全局提示框-->
+	<show-empty ng-if="globalTip.isShow" pic="globalTip.pic" msg="globalTip.msg"></show-empty>
 
 </body>
+
+<!--js-->
+<script src="common/js/jquery.min.js?version=1.1"></script>
+<script src="common/js/angular.min.js?version=1.1"></script>
+<script src="common/js/hPopup.js?version=1.1"></script>
+<script src="common/js/angular.cookie.js?version=1.1"></script>
+<script src="common/js/angular.swiper.js?version=1.1"></script>
+<script src="common/js/ng.infinite.scroll.min.js?version=1.1"></script>
+<script src="common/js/ng.lazyload.js?version=1.1"></script>
+<script src="common/js/angular.ui.router.min.js?version=1.1"></script>
+<script src="common/js/angular.scrollable.js?version=1.1"></script>
+<script src="common/js/ocLazyLoad.require.min.js?version=1.1"></script>
+<script src="common/js/require.js?version=1.1"></script>
+<script src="common/js/mobiscroll.custom.min.js?version=1.1"></script>
+<script src="common/js/app.js?version=1.1"></script>
+<script src="common/js/directive.js?version=1.1"></script>
+<script src="common/js/factory.js?version=1.7"></script>
+<script src="common/js/md5.js"></script>
 </html>
